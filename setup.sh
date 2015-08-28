@@ -21,11 +21,12 @@ npm install -g jshint
 # See: http://nodejs.org/api/repl.html#repl_repl
 sudo apt-get install -y rlwrap
 
-# Install emacs24
-# https://launchpad.net/~cassou/+archive/emacs
-sudo add-apt-repository -y ppa:cassou/emacs
+# Install emacs-snapshot: https://launchpad.net/~ubuntu-elisp/+archive/ubuntu/ppa
+sudo add-apt-repository ppa:ubuntu-elisp/ppa
 sudo apt-get -qq update
-sudo apt-get install -y emacs24-nox emacs24-el emacs24-common-non-dfsg
+sudo aptitude install emacs-snapshot-nox emacs-snapshot-el emacs-snapshot-common
+#Install purge facility to remove PPA's and their installed packages
+sudo apt-get install ppa-purge
 
 # Install Heroku toolbelt
 # https://toolbelt.heroku.com/debian
